@@ -15,6 +15,7 @@ pip install "uvicorn[standard]"
 pip install sqlalchemy
 pip install asyncpg
 pip install alembic
+pip install loguru
 pip freeze > requirements.txt
 alembic init app/migrations
 uvicorn app.main:app --reload --port 8000
