@@ -1,0 +1,24 @@
+services:
+  clothes_shop_api:
+    # Берем Dockerfile из каталога app
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    # Запускаем тестовый сервер
+    command: uvicorn app.main:app --host 0.0.0.0
+    # Открываем порт 8000 внутри и снаружи
+    ports:
+      - 8080:8000
+  
+  clothes_shop_db:
+    image: postgres:15
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=clothes_shop
+      - POSTGRES_PASSWORD=clothes_shop
+      - POSTGRES_DB=clothes_shop
+      - POSTGRES_INITDB_ARGS=--encoding=UTF-8
+
+volumes:
+  postgres_data:
