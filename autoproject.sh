@@ -10,6 +10,8 @@ echo "# Настройки базы данных" > app/database.py
 echo > app/__init__.py
 echo > app/routers/__init__.py
 echo > app/models/__init__.py
+echo > Dockerfile
+echo > .dockerignore
 pip install fastapi
 pip install "uvicorn[standard]"
 pip install sqlalchemy
