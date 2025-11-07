@@ -9,7 +9,7 @@ from sqlalchemy.orm import DeclarativeBase
 
 # Строка подключения для PostgreSQl
 DATABASE_URL = (
-    "postgresql+asyncpg://burger_joint:burger_joint@localhost:5432/burger_joint"
+    "postgresql+asyncpg://clothes_shop:clothes_shop@localhost:5432/clothes_shop"
 )
 
 # Создаём Engine

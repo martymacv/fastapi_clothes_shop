@@ -15,9 +15,12 @@ echo > .dockerignore
 pip install fastapi
 pip install "uvicorn[standard]"
 pip install sqlalchemy
+pip install pydantic
+pip install 'pydantic[email]'
 pip install asyncpg
 pip install alembic
 pip install loguru
+pip install greenlet
 pip freeze > requirements.txt
 alembic init app/migrations
 uvicorn app.main:app --reload --port 8000
